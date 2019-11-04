@@ -1,5 +1,9 @@
 # ping-pong
  A simple game made with JavaScript
+ 
+## Preview:
+
+ https://alphamod1.github.io/ping-pong/
 
 
 ## Controls:
