@@ -5,11 +5,11 @@
 ## Controls:
 
 Player 1:
-w - up
-s - down
+- w - up
+- s - down
 
 -----------------------------------------------
 
 Player 2:
-i - up
-k - down
+- i - up
+- k - down
