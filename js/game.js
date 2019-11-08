@@ -4,6 +4,7 @@ var ypos = 240;
 var ymomentum = getYMomentum();
 var wasInTheMiddle = true;
 var side = Math.floor(Math.random() * 2);
+var gameState = "paused";
 var timer;
 $(document).ready(function () {
     $('#btn').click(function(e) {  
@@ -14,6 +15,7 @@ $(document).ready(function () {
 function runGame() {
     $('#btn').css("display", "none");
     timer = setInterval(function () { moveBall(side); }, 40);
+    gameState = "running";
     startMovement();
     $('#ball').css("display", "inline-block");
 }
@@ -30,6 +32,11 @@ function startMovement() {
 
 function stopMovement() {
     clearInterval(timer);
+    gameState = "paused";
+    p1Pos = 225;
+    p2Pos = 225;
+    $('#p1').css("bottom", p1Pos + "px");
+    $('#p2').css("bottom", p2Pos + "px");
     $('#btn').css("display", "inline-block");
 }
 
