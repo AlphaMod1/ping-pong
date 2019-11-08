@@ -38,11 +38,11 @@ function moveBall(side) {
     checkCollision();
 
     if (side == 0) {
-        xpos = xpos + ballSpeed;
+        xpos += ballSpeed;
         $('#ball').css("left", xpos + "px");
     }
     else if (side == 1) {
-        xpos = xpos - ballSpeed;
+        xpos -= ballSpeed;
         $('#ball').css("left", xpos + "px");
     }
 

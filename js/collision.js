@@ -3,14 +3,14 @@ function hit() {
     if (wasInTheMiddle) {
         if (side == 0) {
             side = 1;
-            xpos = xpos - 20;
+            xpos -= 20;
         }
         else if (side == 1) {
             side = 0;
-            xpos = xpos + 20;
+            xpos += 40;
         }
-        ymomentum = ymomentum + changeYMomentum();
-        ballSpeed = ballSpeed + 0.1;
+        ymomentum += changeYMomentum();
+        ballSpeed += 0.1;
     }
     wasInTheMiddle = false;
 }
@@ -18,11 +18,11 @@ function hit() {
 function checkCollision() {
 
 
-    if (xpos <= 10 && (ypos + 20 > p1Pos && ypos < p1Pos + 80)) {
+    if (xpos <= 20 && (ypos + 20 > p1Pos && ypos < p1Pos + 80)) {
         hit();
     }
 
-    if (xpos >= 770 && (ypos + 20 > p2Pos && ypos < p2Pos + 80)) {
+    if (xpos >= 760 && (ypos + 20 > p2Pos && ypos < p2Pos + 80)) {
         hit();
     }
 
@@ -35,11 +35,11 @@ function checkCollision() {
     }
 
     if (ypos >= 480) {
-        ymomentum = ymomentum * -1;
+        ymomentum *= -1;
     }
 
     if (ypos <= 0) {
-        ymomentum = ymomentum * -1;
+        ymomentum *= -1;
     }
 
     if (xpos > 380 && xpos < 420) {
