@@ -38,7 +38,7 @@ body, body * {
     background-color: black;
     position: absolute;
     bottom: 225px;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 #p1 {
